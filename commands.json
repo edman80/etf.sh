@@ -1,0 +1,21 @@
+{
+  "contact": {
+    "description": "how to reach me",
+    "lines": [
+      "Eddie Fiorentine",
+      "Director, Core Cloud Engineering @ Vultr",
+      "",
+      { "label": "email", "text": "eddie@etf.sh", "url": "mailto:eddie@etf.sh" },
+      { "label": "github", "text": "github.com/edman80", "url": "https://github.com/edman80" },
+      { "label": "linkedin", "text": "linkedin.com/in/eddiefiorentine", "url": "https://linkedin.com/in/eddiefiorentine" }
+    ]
+  },
+  "projects": {
+    "description": "stuff i've worked on",
+    "lines": [
+      { "label": "convert amd-smi rust crate to dynamically load via libloading", "text": "open pull request", "url": "https://github.com/ROCm/amdsmi/pull/179" },
+      { "label": "add sip monitor type to uptime kuma", "text": "merged pull request", "url": "https://github.com/louislam/uptime-kuma/pull/5362" },
+      { "label": "misc contributions to opensips", "text": "commits", "url": "https://github.com/OpenSIPS/opensips/commits/master/?author=eddie-planetnet" }
+    ]
+  }
+}
