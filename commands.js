@@ -17,6 +17,14 @@
 //    which render as an aligned "label   text" row (text becomes a link when
 //    `url` is present).
 //
+//    To make a command jump straight to a link in a new tab instead of
+//    printing output, use `url` in place of `lines`:
+//
+//      "mycommand": {
+//        "description": "shown in `help` output",
+//        "url": "https://example.com"
+//      }
+//
 // 2. Commands that need actual logic (like `theme` or `date`) -> add to
 //    SYSTEM_COMMANDS below:
 //
@@ -52,6 +60,17 @@ function renderJsonLines(lines) {
 }
 
 function buildJsonCommand(entry) {
+  if (entry.url) {
+    return {
+      description: entry.description || "",
+      category: "custom",
+      run: () => {
+        window.open(entry.url, "_blank", "noopener,noreferrer");
+        return `opening ${link(entry.url, entry.url)} in a new tab...`;
+      },
+    };
+  }
+
   return {
     description: entry.description || "",
     category: "custom",

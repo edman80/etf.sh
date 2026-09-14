@@ -17,5 +17,17 @@
       { "label": "add sip monitor type to uptime kuma", "text": "merged pull request", "url": "https://github.com/louislam/uptime-kuma/pull/5362" },
       { "label": "misc contributions to opensips", "text": "commits", "url": "https://github.com/OpenSIPS/opensips/commits/master/?author=eddie-planetnet" }
     ]
+  },
+  "sendmail": {
+    "description": "send me an email",
+    "url": "mailto:eddie@etf.sh"
+  },
+  "linkedin": {
+    "description": "my linkedin profile",
+    "url": "https://linkedin.com/in/eddiefiorentine"
+  },
+  "github": {
+    "description": "my github profile",
+    "url": "https://github.com/edman80"
   }
 }

@@ -22,4 +22,13 @@ Most commands are plain informational output and belong in `commands.json`:
 }
 ```
 
+A command can also jump straight to a link in a new tab instead of printing output — use `url` in place of `lines`:
+
+```json
+"mycommand": {
+  "description": "shown in help",
+  "url": "https://example.com"
+}
+```
+
 Commands that need actual logic (like `theme`) go in `SYSTEM_COMMANDS` in `commands.js`.
