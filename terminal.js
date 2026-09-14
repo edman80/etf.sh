@@ -45,11 +45,16 @@
     sessionStorage.setItem(HISTORY_KEY, JSON.stringify(history));
   }
 
+  function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
   function appendLine(html, className) {
     const div = document.createElement("div");
     div.className = "line" + (className ? " " + className : "");
     div.innerHTML = html || "&nbsp;";
     output.appendChild(div);
+    scrollToBottom();
   }
 
   function appendCommandEcho(promptText, typed) {
@@ -64,6 +69,7 @@
     div.appendChild(promptSpan);
     div.appendChild(typedSpan);
     output.appendChild(div);
+    scrollToBottom();
   }
 
   function getPromptText() {
@@ -134,8 +140,6 @@
       const value = input.value;
       setInputValue("");
       runCommand(value);
-      terminal.scrollTop = terminal.scrollHeight;
-      window.scrollTo(0, document.body.scrollHeight);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       if (historyIndex > 0) {
@@ -166,12 +170,49 @@
     input.focus();
   });
 
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async function loadBootLines() {
+    try {
+      const res = await fetch("boot.json");
+      return await res.json();
+    } catch (e) {
+      console.error("failed to load boot.json:", e);
+      return [];
+    }
+  }
+
+  // Plays the boot log a line at a time. Pressing a key or clicking flushes
+  // the rest of the log immediately instead of waiting out the delays.
+  async function playBootSequence(lines) {
+    let skip = false;
+    const onSkip = () => { skip = true; };
+    window.addEventListener("keydown", onSkip);
+    window.addEventListener("mousedown", onSkip);
+
+    for (const line of lines) {
+      appendLine(escapeHtml(line.text), "dim");
+      if (!skip) await sleep(line.delay);
+    }
+
+    window.removeEventListener("keydown", onSkip);
+    window.removeEventListener("mousedown", onSkip);
+  }
+
   async function init() {
     input.disabled = true;
-    const custom = await loadCustomCommands();
+    inputLine.style.display = "none";
+
+    const [custom, bootLines] = await Promise.all([loadCustomCommands(), loadBootLines()]);
     Object.assign(COMMANDS, custom, SYSTEM_COMMANDS);
 
+    await playBootSequence(bootLines);
+    output.innerHTML = "";
+
     appendLine(`Welcome to etf.sh. Type <strong>help</strong> to see available commands.`);
+    inputLine.style.display = "";
     input.disabled = false;
     sizeInput();
     input.focus();

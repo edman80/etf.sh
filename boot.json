@@ -1,0 +1,402 @@
+[
+  {
+    "text": "Linux version 6.9.0-etfsh (eddie@etf.sh) (gcc (GCC) 13.2.0) #1 SMP PREEMPT_DYNAMIC",
+    "delay": 20
+  },
+  {
+    "text": "Command line: BOOT_IMAGE=/boot/vmlinuz-etfsh root=/dev/sda1 ro quiet splash",
+    "delay": 20
+  },
+  {
+    "text": "KERNEL supported cpus: Intel, AMD, Centaur, zhaoxin",
+    "delay": 20
+  },
+  {
+    "text": "x86/fpu: x87 FPU will use FXSAVE",
+    "delay": 20
+  },
+  {
+    "text": "x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'",
+    "delay": 20
+  },
+  {
+    "text": "x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'",
+    "delay": 20
+  },
+  {
+    "text": "x86/fpu: xstate_offset[2]: 576, xstate_sizes[2]: 256",
+    "delay": 20
+  },
+  {
+    "text": "signal: max sigframe size: 1776",
+    "delay": 20
+  },
+  {
+    "text": "BIOS-provided physical RAM map:",
+    "delay": 20
+  },
+  {
+    "text": "BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable",
+    "delay": 20
+  },
+  {
+    "text": "BIOS-e820: [mem 0x0000000000100000-0x00000000bffdffff] usable",
+    "delay": 20
+  },
+  {
+    "text": "BIOS-e820: [mem 0x00000000bffe0000-0x00000000bfffffff] reserved",
+    "delay": 20
+  },
+  {
+    "text": "SMBIOS 3.2.0 present.",
+    "delay": 20
+  },
+  {
+    "text": "tsc: Fast TSC calibration using PIT",
+    "delay": 20
+  },
+  {
+    "text": "tsc: Detected 3400.000 MHz processor",
+    "delay": 20
+  },
+  {
+    "text": "last_pfn = 0xbffe0 max_arch_pfn = 0x400000000",
+    "delay": 20
+  },
+  {
+    "text": "Zone ranges:",
+    "delay": 20
+  },
+  {
+    "text": "  DMA      [mem 0x0000000000001000-0x0000000000ffffff]",
+    "delay": 20
+  },
+  {
+    "text": "  DMA32    [mem 0x0000000001000000-0x00000000bfffffff]",
+    "delay": 20
+  },
+  {
+    "text": "smpboot: Allowing 8 CPUs, 0 hotplug CPUs",
+    "delay": 20
+  },
+  {
+    "text": "PM: Registering ACPI NVS region [mem 0xbffdf000-0xbffdffff] (4096 bytes)",
+    "delay": 20
+  },
+  {
+    "text": "ACPI: Core revision 20230628",
+    "delay": 190
+  },
+  {
+    "text": "ACPI: PM-Timer IO Port: 0x608",
+    "delay": 20
+  },
+  {
+    "text": "ACPI: Local APIC address 0xfee00000",
+    "delay": 20
+  },
+  {
+    "text": "ACPI: IOAPIC (id[0x00] address[0xfec00000] gsi_base[0])",
+    "delay": 20
+  },
+  {
+    "text": "ACPI: Using ACPI (MADT) for SMP configuration information",
+    "delay": 20
+  },
+  {
+    "text": "PCI: Using ACPI for IRQ routing",
+    "delay": 20
+  },
+  {
+    "text": "pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]",
+    "delay": 20
+  },
+  {
+    "text": "pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]",
+    "delay": 20
+  },
+  {
+    "text": "pci 0000:00:00.0: [8086:1237] type 00 class 0x060000",
+    "delay": 20
+  },
+  {
+    "text": "pci 0000:00:01.0: [8086:7000] type 00 class 0x060100",
+    "delay": 20
+  },
+  {
+    "text": "pci 0000:00:02.0: [1234:1111] type 00 class 0x030000",
+    "delay": 20
+  },
+  {
+    "text": "clocksource: tsc-early: mask 0xffffffffffffffff max_cycles 0x30c2a3524a",
+    "delay": 20
+  },
+  {
+    "text": "Console: colour dummy device 80x25",
+    "delay": 20
+  },
+  {
+    "text": "printk: console [tty0] enabled",
+    "delay": 20
+  },
+  {
+    "text": "Calibrating delay loop (skipped), value calculated using timer frequency.. 6800.00 BogoMIPS",
+    "delay": 20
+  },
+  {
+    "text": "pid_max: default: 32768 minimum: 301",
+    "delay": 20
+  },
+  {
+    "text": "Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)",
+    "delay": 20
+  },
+  {
+    "text": "Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)",
+    "delay": 20
+  },
+  {
+    "text": "rcu: Hierarchical RCU implementation.",
+    "delay": 20
+  },
+  {
+    "text": "rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.",
+    "delay": 20
+  },
+  {
+    "text": "NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16",
+    "delay": 20
+  },
+  {
+    "text": "futex hash table entries: 1024 (order: 4, 65536 bytes, linear)",
+    "delay": 20
+  },
+  {
+    "text": "workqueue: allocated 32 bound percpu pools",
+    "delay": 20
+  },
+  {
+    "text": "devtmpfs: initialized",
+    "delay": 20
+  },
+  {
+    "text": "clocksource: jiffies: mask 0xffffffff max_cycles 0xffffffff",
+    "delay": 20
+  },
+  {
+    "text": "pinctrl core: initialized pinctrl subsystem",
+    "delay": 20
+  },
+  {
+    "text": "NET: Registered PF_NETLINK/PF_ROUTE protocol family",
+    "delay": 20
+  },
+  {
+    "text": "PCI: Using configuration type 1 for base access",
+    "delay": 20
+  },
+  {
+    "text": "clocksource: Switched to clocksource tsc-early",
+    "delay": 20
+  },
+  {
+    "text": "VFS: Disk quotas dquot_6.6.0",
+    "delay": 20
+  },
+  {
+    "text": "usb usb1: New USB device found, idVendor=1d6b, idProduct=0002",
+    "delay": 20
+  },
+  {
+    "text": "usb usb1: Manufacturer: Linux 6.9.0 xhci-hcd",
+    "delay": 20
+  },
+  {
+    "text": "scsi host0: ahci",
+    "delay": 20
+  },
+  {
+    "text": "ata1: SATA max UDMA/133 abar m2048@0xf7d34000 port 0xf7d34100 irq 44",
+    "delay": 210
+  },
+  {
+    "text": "ata1.00: ATA-11: etfsh-vdisk, rev 1.0, max UDMA/133",
+    "delay": 120
+  },
+  {
+    "text": "sda: sda1 sda2",
+    "delay": 20
+  },
+  {
+    "text": "EXT4-fs (sda1): mounted filesystem with ordered data mode",
+    "delay": 100
+  },
+  {
+    "text": "VFS: Mounted root (ext4 filesystem) readonly on device 8:1",
+    "delay": 20
+  },
+  {
+    "text": "devtmpfs: mounted",
+    "delay": 20
+  },
+  {
+    "text": "Freeing unused kernel image (initmem) memory: 2624K",
+    "delay": 20
+  },
+  {
+    "text": "Write protecting the kernel read-only data: 24576k",
+    "delay": 20
+  },
+  {
+    "text": "x86/mm: Checked W+X mappings: passed, no W+X pages found",
+    "delay": 20
+  },
+  {
+    "text": "Run /sbin/init as init process",
+    "delay": 160
+  },
+  {
+    "text": "systemd[1]: etfsh v255 running in system mode (+PAM +AUDIT -SELINUX +APPARMOR)",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Detected virtualization kvm.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Detected architecture x86-64.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Hostname set to <etf-sh>.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Initializing machine ID from random generator.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Installed transient /etc/machine-id file.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Queued start job for default target Multi-User System.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Created slice Slice /system/getty.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Started Journal Service.",
+    "delay": 90
+  },
+  {
+    "text": "systemd[1]: Starting Load Kernel Modules...",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting Remount Root and Kernel File Systems...",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting Create System Users...",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting udev Coldplug all Devices...",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Started Load Kernel Modules.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Mounted /tmp.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting Network Time Synchronization...",
+    "delay": 110
+  },
+  {
+    "text": "systemd-timesyncd[389]: Using time server 169.254.169.123:123.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting Network Configuration...",
+    "delay": 150
+  },
+  {
+    "text": "NET: Registered PF_INET protocol family",
+    "delay": 20
+  },
+  {
+    "text": "systemd-networkd[412]: eth0: Link UP",
+    "delay": 20
+  },
+  {
+    "text": "systemd-networkd[412]: eth0: Gained carrier",
+    "delay": 160
+  },
+  {
+    "text": "systemd-networkd[412]: eth0: DHCPv4 address 10.0.4.17/24 via 10.0.4.1",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Reached target Network.",
+    "delay": 80
+  },
+  {
+    "text": "systemd-resolved[420]: Positive Trust Anchors: .: 20326",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Started Network Name Resolution.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting OpenSSH Daemon...",
+    "delay": 130
+  },
+  {
+    "text": "sshd[512]: Server listening on 0.0.0.0 port 22.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Started OpenSSH Daemon.",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Starting etfsh-terminal.service...",
+    "delay": 160
+  },
+  {
+    "text": "etfsh-terminal[601]: loading command registry",
+    "delay": 20
+  },
+  {
+    "text": "etfsh-terminal[601]: fetching commands.json",
+    "delay": 130
+  },
+  {
+    "text": "etfsh-terminal[601]: fetching boot.json",
+    "delay": 130
+  },
+  {
+    "text": "etfsh-terminal[601]: commands loaded ok",
+    "delay": 20
+  },
+  {
+    "text": "systemd[1]: Started etfsh-terminal.service.",
+    "delay": 90
+  },
+  {
+    "text": "systemd[1]: Reached target Multi-User System.",
+    "delay": 470
+  },
+  {
+    "text": "etf-sh login: guest (automatic login)",
+    "delay": 670
+  }
+]

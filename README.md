@@ -3,7 +3,7 @@ etf.sh website
 
 ## Running locally
 
-This is a static site, but `commands.json` is loaded via `fetch`, so it needs to be served over http — opening `index.html` directly (`file://`) won't load custom commands.
+This is a static site, but `commands.json` and `boot.json` are loaded via `fetch`, so it needs to be served over http — opening `index.html` directly (`file://`) won't load custom commands or the boot sequence.
 
 ```
 python3 -m http.server 8000
@@ -32,3 +32,7 @@ A command can also jump straight to a link in a new tab instead of printing outp
 ```
 
 Commands that need actual logic (like `theme`) go in `SYSTEM_COMMANDS` in `commands.js`.
+
+## Boot sequence
+
+On page load, a fake kernel boot log plays from `boot.json` (a list of `{ "text": ..., "delay": <ms> }` lines) before the prompt appears — currently timed to run about 5 seconds. Pressing any key or clicking during it skips straight to the prompt. Edit `boot.json` to change the log or its timing.
