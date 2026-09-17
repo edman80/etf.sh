@@ -45,8 +45,12 @@ body {
 
 #terminal {
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 24px;
   cursor: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #output {
