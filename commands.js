@@ -161,6 +161,27 @@ const SYSTEM_COMMANDS = {
     category: "system",
     run: () => new Date().toString(),
   },
+
+  sitecount: {
+    description: "print the current site visit count",
+    category: "system",
+    run: async () => {
+      try {
+        const res = await fetch(`${window.COUNTER_BASE}/count`);
+        const text = (await res.text()).trim();
+        let count = text;
+        try {
+          const data = JSON.parse(text);
+          count = typeof data === "object" ? data.count : data;
+        } catch (e) {
+          // response wasn't JSON, use the raw text
+        }
+        return `site count: ${count}`;
+      } catch (e) {
+        return { error: "couldn't reach the site counter" };
+      }
+    },
+  },
 };
 
 window.SYSTEM_COMMANDS = SYSTEM_COMMANDS;

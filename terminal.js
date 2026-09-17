@@ -117,7 +117,13 @@
 
     try {
       const result = command.run(args);
-      renderResult(result);
+      if (result && typeof result.then === "function") {
+        result
+          .then(renderResult)
+          .catch((e) => appendLine(`error running ${escapeHtml(name)}: ${escapeHtml(e.message)}`, "error"));
+      } else {
+        renderResult(result);
+      }
     } catch (e) {
       appendLine(`error running ${escapeHtml(name)}: ${escapeHtml(e.message)}`, "error");
     }
@@ -201,9 +207,22 @@
     window.removeEventListener("mousedown", onSkip);
   }
 
+  const COUNTER_BASE = "https://counter.etf.sh";
+
+  // Best-effort visit counter increment; never blocks or breaks page load.
+  function incrementSiteCounter() {
+    fetch(`${COUNTER_BASE}/increment`).catch((e) => {
+      console.error("failed to increment site counter:", e);
+    });
+  }
+
+  window.COUNTER_BASE = COUNTER_BASE;
+
   async function init() {
     input.disabled = true;
     inputLine.style.display = "none";
+
+    incrementSiteCounter();
 
     const [custom, bootLines] = await Promise.all([loadCustomCommands(), loadBootLines()]);
     Object.assign(COMMANDS, custom, SYSTEM_COMMANDS);
